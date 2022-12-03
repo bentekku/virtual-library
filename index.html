@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./script/app.js" defer></script>
+    <title>Book Tracker</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="titles">
+        <h1>Book Tracker</h1>
+        <p>Keeps track of all the books you have read or want to.</p>
+      </div>
+      <form action="" class="inputs">
+        <input
+          id="inp-book-name"
+          type="text"
+          name="bookName"
+          placeholder="Book Title"
+        />
+        <input id="inp-author" type="text" name="author" placeholder="Author" />
+        <select id="inp-status" name="status">
+          <option value="read">Read</option>
+          <option value="not-read">Not Read</option>
+          <option value="reading">Reading</option>
+        </select>
+        <button id="inp-add" type="submit">Add</button>
+      </form>
+      <div class="books-wrapper">
+        <div class="book-card"></div>
+      </div>
+    </main>
+  </body>
+</html>

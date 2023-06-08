@@ -1,14 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Diphylleia&display=swap");
 
 :root {
-  /* --text-color: #ba94d1; */
-  /* --text-color: #e97777; */
-  --text-color: #b1b2ff;
-
-  --book-read: #08a90ea6;
-  --book-unread: #ff161685;
-
-  --bg-color: #f9f9f9;
+  --primary-color: #28252c;
+  --secondary-color: #fff;
 }
 
 *,
@@ -16,158 +10,149 @@
 *::after {
   margin: 0;
   padding: 0;
-
-  background-color: var(--bg-color);
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 body {
-  width: 100vw;
+  font-family: "Diphylleia", serif;
+  font-weight: 600;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+
+  margin: 1rem 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.logo #last--logo {
+  font-size: 1.5rem;
+  margin-left: 5.2rem;
+  margin-top: -0.6rem;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+}
+
+#home--page {
   height: 100vh;
 
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
 
-.container {
+.home-page-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page-text hr {
+  width: 240px;
+  margin-top: 0.5rem;
+}
+
+#home--page svg {
+  margin-top: 22rem;
+}
+
+#book--list {
+  height: 100vh;
   padding: 2rem;
-
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-
-  border: 1px dashed salmon;
+  align-items: center;
 }
 
-.titles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-}
+#book--list form {
+  margin-top: 2rem;
 
-#hero-title {
-  font-size: 2.25rem;
-  font-weight: 900;
-  font-style: italic;
-  text-decoration: underline;
-  color: var(--text-color);
-}
-
-.inputs {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
 }
 
-input,
-select,
-button {
+#book--list form input,
+#book--list form select,
+#book--list form button {
+  height: 2.5rem;
+
+  border: 2px solid;
+  border-radius: 7px;
+}
+
+#book--list form select,
+#book--list form button {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+}
+
+#book--list form input {
+  width: 15rem;
+  text-indent: 1rem;
+}
+#book--list form select {
+  width: 10rem;
+  text-align: center;
+}
+#book--list form button {
   width: 12rem;
-  height: 2rem;
-
-  border-radius: 0.3rem;
-
-  padding: 0 1rem;
-}
-
-input,
-button {
-  border: 1px solid #343434;
-}
-
-button {
   cursor: pointer;
 }
 
-#inp-add {
-  background-color: var(--text-color);
-  color: var(--bg-color);
-  font-weight: 900;
-  border: none;
-
-  transition: all 250ms;
+#book--list hr {
+  width: 80%;
+  margin-top: 6rem;
 }
 
-#inp-add:hover {
-  scale: 1.05;
-}
-
-.books-wrapper {
-  width: 100%;
-  height: 100%;
-
+.book-entry {
+  margin: 2rem 0;
   display: flex;
+  gap: 8rem;
   align-items: center;
-  justify-content: center;
-  gap: 6rem;
-  flex-wrap: wrap;
-
-  border: 1px solid salmon;
+  justify-content: space-around;
 }
 
-.book-card {
-  width: 310px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  margin: 2rem;
-  padding: 1rem 0.5rem;
-
-  border: 1px solid var(--book-read);
-  border-radius: 0.5rem;
+.book-entry .read-status {
+  font-style: italic;
 }
 
-.book-card h1 {
-  font-size: 1.2rem;
-
-  color: #343434;
+.book-entry button {
+  /* border: none; */
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 180ms ease-in;
 }
 
-.btm-bar {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  gap: 1rem;
-}
-
-.option-btns {
-  display: flex;
-  margin-left: 1rem;
-  gap: 1rem;
-}
-.option-btns button {
-  width: 84px;
-  order: -1;
-  font-weight: 500;
-}
-
-.btn-delete {
-  color: var(--bg-color);
-  background-color: var(--book-unread);
-
-  border: none;
-  transition: all 250ms;
-}
-
-.btn-read {
-  transition: all 250ms;
-}
-
-.btn-read:hover {
-  scale: 1.05;
-}
-
-.btn-delete:hover {
-  scale: 1.05;
-}
-
-.book-card h2 {
-  font-size: 0.9rem;
-
-  font-weight: 500;
-  color: #646464;
+.book-entry button:hover {
+  transform: rotate(45deg);
 }

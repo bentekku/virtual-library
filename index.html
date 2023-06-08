@@ -9,42 +9,100 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script src="./script/app.js" defer></script>
+    <script src="./script/main.js" defer></script>
     <title>Book Tracker</title>
   </head>
   <body>
-    <main class="container">
-      <div class="titles">
-        <h1 id="hero-title">Book Tracker</h1>
-        <p>Keeps track of all the books you have read or want to.</p>
-      </div>
-      <form action="" class="inputs">
-        <input
-          id="inp-book-name"
-          type="text"
-          name="bookName"
-          placeholder="Book Title"
-        />
-        <input id="inp-author" type="text" name="author" placeholder="Author" />
-        <select id="inp-status" name="status">
-          <option value="read">Read</option>
-          <option value="not-read">Not Read</option>
-          <option value="reading">Reading</option>
-        </select>
-        <button id="inp-add" type="submit">Add</button>
-      </form>
-      <div class="books-wrapper">
-        <div class="book-card">
-          <h1 class="book-name">Assassin's Creed Revelations</h1>
-          <div class="btm-bar">
-            <h2 class="book-auth">Oliver Bowden</h2>
-            <div class="option-btns">
-              <button class="btn-read">Read</button>
-              <button class="btn-delete">DELETE</button>
-            </div>
+    <main>
+      <header>
+        <div class="logo">
+          <p>BOOK</p>
+          <p id="last--logo">TRACKER</p>
+        </div>
+        <div class="nav-bar">
+          <p>AUTHOR</p>
+          <a href="https://github.com/bentekku/virtual-library" target="_blank"
+            >SOURCE CODE</a
+          >
+        </div>
+      </header>
+      <section id="home--page">
+        <div class="home-page-text">
+          <p>Keeps track of all the books that you have read or about to.</p>
+          <hr />
+        </div>
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M17.25 13.75L12 19.25L6.75 13.75"
+          ></path>
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            d="M12 18.25V4.75"
+          ></path>
+        </svg>
+      </section>
+      <section id="book--list">
+        <form action="#">
+          <input
+            type="text"
+            name="book-name"
+            id="book--name"
+            placeholder="Boook Title"
+          />
+          <input
+            type="text"
+            name="author-name"
+            id="author--name"
+            placeholder="Author Name"
+          />
+          <select name="book-status" id="book--status">
+            <option value="reading">reading</option>
+            <option value="read">read</option>
+            <option value="not-read">not read</option>
+          </select>
+          <button id="add--book">Add</button>
+        </form>
+        <hr />
+        <div class="book-entry">
+          <div class="book">
+            <p>Ikigai</p>
+            <p>someone and someone</p>
+            <p class="read-status">read</p>
+            <button id="delete">
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M6.75 7.75L7.59115 17.4233C7.68102 18.4568 8.54622 19.25 9.58363 19.25H14.4164C15.4538 19.25 16.319 18.4568 16.4088 17.4233L17.25 7.75"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9.75 7.5V6.75C9.75 5.64543 10.6454 4.75 11.75 4.75H12.25C13.3546 4.75 14.25 5.64543 14.25 6.75V7.5"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M5 7.75H19"
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>

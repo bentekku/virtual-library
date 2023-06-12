@@ -1,6 +1,6 @@
 # Virtual Library
 
-![Virtual Library Logo](https://github.com/bentekku/virtual-library/blob/main/assets/logo.png)
+![Virtual Library Logo]("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📑</text></svg>")
 
 Virtual Library is a web-based application that allows users to manage and organize their personal book collection. With Virtual Library, you can easily track the books you own, add new books to your collection, update book details, and remove books when needed. It provides a convenient way to have a virtual catalog of your books, making it easy to search and reference your collection.
 
